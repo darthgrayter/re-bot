@@ -7,10 +7,10 @@ function getRndInteger(min, max) {
 
 function randomlyConvertToUppercase(str) {
 	if (Math.random() > 0.800) {
-		str.toUpperCase();
+		str = str.toUpperCase();
 	}
 	else {
-		str.toLowerCase();
+		str = str.toLowerCase();
 	}
 	return str;
 }
@@ -41,8 +41,8 @@ client.on("message", (message) => {
 		var i = getRndInteger(1, 30);
 		while (i > 0) {
 			lilRe = "";
-			var j = determineNumOfDupes();
 
+			var j = determineNumOfDupes();
 			while (j > 0) {
 				lilRe += randomlyConvertToUppercase("r");
 				j--;
