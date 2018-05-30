@@ -30,12 +30,37 @@ function determineNumOfDupes() {
 	return j;
 }
 
+function downInTheDM(userToSend, messageToSend) {
+	userToSend.send(messageToSend);
+}
+
 client.on("ready", () => {
 	console.log("Leggo bish");
 });
 
 client.on("message", (message) => {
-	if (message.content.startsWith("re")) {
+	if (message.content.includes("beseech")) {
+		var messageToSend = "";
+		var userToSend = message.mentions.users.first();
+
+		message.channel.send("Indubitably, my good fellow.");
+
+		// sending the message
+
+		messageToSend = "Just let it happen";
+		userToSend.send(messageToSend);
+
+		while (i < 10) {
+			messageToSend = "";
+
+			if (Math.random() > 0.500) {
+				str = str.toUpperCase();
+			}
+			setTimeout(downInTheDM(userToSend, messageToSend), 1000 * 60 * getRndInteger(1, 30));
+			
+			i++;
+		}
+	} else if (message.content.startsWith("re") || message.content.startsWith("rE") || message.content.startsWith("RE") || message.content.startsWith("Re")) {
 		var re = "";
 		var lilRe = "";
 		var i = getRndInteger(1, 30);
@@ -62,5 +87,4 @@ client.on("message", (message) => {
 });
 
 client.login(process.env.BOT_TOKEN);
-
 
