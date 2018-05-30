@@ -1,0 +1,10 @@
+{
+  "name": "re-bot",
+  "version": "1.0.1",
+  "description": "rererrere",
+  "main": "bot.js",
+  "author": "Gray-Dougherty",
+  "dependencies": {
+    "discord.js": "^11.3.2"
+  }
+}
