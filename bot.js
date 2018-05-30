@@ -53,6 +53,9 @@ client.on("message", (message) => {
 				lilRe += randomlyConvertToUppercase("e");
 				j--;
 			}
+
+			re += lilRe;
+			i--;
 		}
 		message.channel.send(re);
 	}
