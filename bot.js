@@ -50,11 +50,19 @@ client.on("message", (message) => {
 		messageToSend = "Just let it happen";
 		userToSend.send(messageToSend);
 
+		var i = 0;
 		while (i < 10) {
-			messageToSend = "";
+			messageToSend = "re";
+
+			var j = 0;
+			var numOfEs = getRndInteger(0, 20);
+			while (j < numOfEs) {
+				messageToSend += "e";
+				j++;
+			}
 
 			if (Math.random() > 0.500) {
-				str = str.toUpperCase();
+				messageToSend = messageToSend.toUpperCase();
 			}
 			setTimeout(downInTheDM(userToSend, messageToSend), 1000 * 60 * getRndInteger(1, 30));
 			
@@ -87,4 +95,3 @@ client.on("message", (message) => {
 });
 
 client.login(process.env.BOT_TOKEN);
-
