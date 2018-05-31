@@ -64,7 +64,7 @@ client.on("message", (message) => {
 			if (Math.random() > 0.500) {
 				messageToSend = messageToSend.toUpperCase();
 			}
-			setTimeout(downInTheDM(userToSend, messageToSend), 1000 * 60 * getRndInteger(1, 30));
+			setTimeout(downInTheDM(userToSend, messageToSend), 1000);
 			
 			i++;
 		}
