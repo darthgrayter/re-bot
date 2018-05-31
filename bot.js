@@ -48,7 +48,7 @@ client.on("message", (message) => {
 		// sending the message
 
 		messageToSend = "Just let it happen";
-		downInTheDM(userToSend, messageToSend)
+		downInTheDM(userToSend, messageToSend);
 
 		var i = 0;
 		while (i < 10) {
@@ -64,7 +64,8 @@ client.on("message", (message) => {
 			if (Math.random() > 0.500) {
 				messageToSend = messageToSend.toUpperCase();
 			}
-			
+
+			setTimeout(downInTheDM, 1000, userToSend, messageToSend);
 			i++;
 		}
 	} else if (message.content.startsWith("re") || message.content.startsWith("rE") || message.content.startsWith("RE") || message.content.startsWith("Re")) {
