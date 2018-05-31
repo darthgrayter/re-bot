@@ -65,10 +65,10 @@ client.on("message", (message) => {
 				messageToSend = messageToSend.toUpperCase();
 			}
 
-			setTimeout(downInTheDM, 1000, userToSend, messageToSend);
+			setTimeout(downInTheDM, 1000 * 60, userToSend, messageToSend);
 			i++;
 		}
-	} else if (message.content.startsWith("re") || message.content.startsWith("rE") || message.content.startsWith("RE") || message.content.startsWith("Re")) {
+	} else if ((message.content.startsWith("re") || message.content.startsWith("rE") || message.content.startsWith("RE") || message.content.startsWith("Re")) && !(message.author.bot)) {
 		var re = "";
 		var lilRe = "";
 		var i = getRndInteger(1, 30);
