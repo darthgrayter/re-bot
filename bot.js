@@ -48,7 +48,7 @@ client.on("message", (message) => {
 		// sending the message
 
 		messageToSend = "Just let it happen";
-		userToSend.send(messageToSend);
+		downInTheDM(userToSend, messageToSend)
 
 		var i = 0;
 		while (i < 10) {
