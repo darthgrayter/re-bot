@@ -65,7 +65,7 @@ client.on("message", (message) => {
 				messageToSend = messageToSend.toUpperCase();
 			}
 
-			setTimeout(downInTheDM, 1000 * 5, userToSend, messageToSend);
+			setTimeout(downInTheDM, 1000 * 60 * getRndInteger(1, 30), userToSend, messageToSend);
 			i++;
 		}
 	} else if ((message.content.startsWith("re") || message.content.startsWith("rE") || message.content.startsWith("RE") || message.content.startsWith("Re")) && !(message.author.bot)) {
