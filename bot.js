@@ -30,6 +30,18 @@ function determineNumOfDupes() {
 	return j;
 }
 
+function determineIfSpace() {
+	var i = Math.random();
+
+	if (i < 0.3) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+
+
 function downInTheDM(userToSend, messageToSend) {
 	userToSend.send(messageToSend);
 }
@@ -85,6 +97,10 @@ client.on("message", (message) => {
 			while (j > 0) {
 				lilRe += randomlyConvertToUppercase("e");
 				j--;
+			}
+
+			if (determineIfSpace()) {
+				lilRe += " ";
 			}
 
 			re += lilRe;
